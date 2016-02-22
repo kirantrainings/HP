@@ -1,0 +1,11 @@
+<div ng-controller="homeCtrl">
+    <select class="form-control" ng-model="selectedTopic"
+            ng-options="topic.name group by topic.mainGroup for topic in topics"></select>
+
+    <h3>{{selectedTopic}}</h3>
+    <div class="form-horizontal">
+        <input type="text" ng-model="userPhone">
+        <button class="btn btn-primary" ng-click="formatPhone()"></button>
+        <h1>{{formattedPhone}}</h1>
+    </div>
+</div>

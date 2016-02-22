@@ -1,0 +1,5 @@
+[
+  {"name":"home","display":"Home","cssClass":"","template":"app/templates/home.html"},
+  {"name":"books","display":"Books","cssClass":"","template":"app/templates/books.html"},
+  {"name":"about","display":"About","cssClass":"","template":"app/templates/about.html"}
+]

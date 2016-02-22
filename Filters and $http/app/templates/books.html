@@ -1,0 +1,22 @@
+<div ng-controller="bookCtrl">
+<h1>Books</h1>
+    <input type="text" class="form-control col-xs-4" ng-model="searchBook">
+<table class="table">
+    <thead>
+    <tr>
+        <th>Row</th>
+        <th>Book Name</th>
+        <th>Author</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in books|filter:searchBook">
+        <td>{{$index}}</td>
+        <td>{{item.name|uppercase}}</td>
+        <td>{{item.author}}</td>
+    </tr>
+
+    </tbody>
+</table>
+</div>
