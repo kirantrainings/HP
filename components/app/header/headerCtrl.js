@@ -8,10 +8,14 @@ function headerCtrlFn($scope){
         firstName:"Kiran",
         lastName:"PVS"
     };
+
+
+
     $scope.handleClick=function(){
         $scope.user.firstName="Angular";
         $scope.user.lastName="IsolatedScope";
-    }
+    };
+    $scope.hello="kiran";
 };
 
 header.controller("headerCtrl",['$scope',headerCtrlFn])

@@ -3,7 +3,8 @@
  */
 angular.module('main',["header",
     "footer",
-    "component.datepicker"]);
+    "component.datepicker",
+    "component.click"]);
 
 angular.module('main').config([function(){
     console.log("i am the main module");

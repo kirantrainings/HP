@@ -14,15 +14,19 @@
 <body ng-app="main">
 
 <div ng-controller="headerCtrl">
+    <button class="btn btn-primary" hp-click="handleClick()" >Click me</button>
+        {{user.firstName}}
+    <input type="text" hp-model="hello">{{hello}}
+    <!--
         <div hp-header  name="{{brandName}}"
              userdetails="user"
                 changedetails="handleClick()"></div>
-        <h3>{{user.firstName}}</h3>
+        <h3>{{user.firstName}}</h3>-->
     </div>
 <script src="app/header/header.js"></script>
 <script src="app/header/headerCtrl.js"></script>
 <script src="app/header/hpHeader.js"></script>
-
+<script src="app/hpClick/hpClick.js"></script>
 
 <script src="app/footer/footer.js"></script>
 <script src="app/datepicker/hpDatePicker.js"></script>
