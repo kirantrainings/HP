@@ -13,9 +13,17 @@
 </head>
 <body ng-app="main">
 
-<input type="text" hp-date-picker maxdate="0" mindate="-10">
-
+<div ng-controller="headerCtrl">
+        <div hp-header  name="{{brandName}}"
+             userdetails="user"
+                changedetails="handleClick()"></div>
+        <h3>{{user.firstName}}</h3>
+    </div>
 <script src="app/header/header.js"></script>
+<script src="app/header/headerCtrl.js"></script>
+<script src="app/header/hpHeader.js"></script>
+
+
 <script src="app/footer/footer.js"></script>
 <script src="app/datepicker/hpDatePicker.js"></script>
 <script src="app/app.js"></script>
