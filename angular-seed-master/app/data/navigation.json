@@ -1,0 +1,8 @@
+{
+  "navItems":[
+    {"displayName":"Home","name":"home"},
+    {"displayName":"Used Cars","name":"usedcars"},
+    {"displayName":"New Cars","name":"newcars"},
+    {"displayName":"Cart", "name":"cart"}
+  ]
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="carDealz" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="carDealz" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="carDealz" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="carDealz" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+
+<div class="container" ng-controller="headerCtrl">
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="" ng-click="loadPage('newcars')">New Cars</a></li>
+                <li><a href="" ng-click="loadPage('usedcars')">Used Cars</a></li>
+                <li><a href="" ng-click="loadPage('compare')">Compare</a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="label-info">{{vehicleSelectedCount}}</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--directive to load the views dynamically-->
+    <div ui-view></div>
+    <div custom-header></div>
+</div>
+
+
+<div ng-controller="usedCarCtrl" style="margin-left:20%">
+    <button class="btn btn-primary" ng-click="addVehicleToCart()">I am outside</button>
+</div>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+<!--
+  <div ng-view></div>
+
+  <div>Angular seed app: v<span app-version></span></div>
+-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!--modules-->
+<script src="common_components/customvehicle/customVehicle.js"></script>
+<script src="common_components/components/customClick.js"></script>
+<script src="common_components/components/customDatePicker.js"></script>
+
+<script src="common_components/customHeader/customHeader.js"></script>
+
+  <script src="header/header.js"></script>
+<script src="header/navigationFactory.js"></script>
+<script src="common_components/vehicleList/customVehicleList.js"></script>
+  <script src="header/headerCtrl.js"></script>
+<!--common-->
+  <script src="common/common.js"></script>
+ <script src="common/vehicleSvc.js"></script>
+<!--newcars-->
+  <script src="newcars/newcars.js"></script>
+  <script src="newcars/newCarCtrl.js"></script>
+<!--used cars-->
+<script src="usedcars/usedcars.js"></script>
+
+<!--compare-->
+<script src="compare/compare.js"></script>
+<script src="compare/compareCtrl.js"></script>
+
+
+<script src="app.js"></script>
+
+
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

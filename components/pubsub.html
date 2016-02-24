@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head lang="en" >
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="content/css/bootstrap.css" rel="stylesheet">
+    <link href="content/css/bootstrap-theme.css" rel="stylesheet">
+    <script src="vendor/jquery-1.11.3.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="vendor/bootstrap.js"></script>
+    <script src="vendor/angular.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="mainCtrl" >
+        <div class="panel panel-default" >
+            <div class="panel-heading">Main Controller</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" ng-click="mainCtrlClick()">Main</button>
+                <pre>{{userDetails|json}}</pre>
+            </div>
+            <div cs-component htmltemplate="{{userA}}"></div>
+            <div cs-component htmltemplate="{{userTemplate}}"></div>
+        </div>
+        <div class="panel panel-default" ng-controller="subCtrl" >
+            <div class="panel-heading">Sub Controller</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" ng-click="subCtrlClick()">Sub</button>
+                <pre>{{userDetails|json}}</pre>
+
+            </div>
+        </div>
+        <div class="panel panel-default" ng-controller="subCtrl2">
+            <div class="panel-heading">Sub Controller2</div>
+            <div class="panel-body">
+                <pre>{{userDetails|json}}</pre>
+                <button class="btn btn-primary" ng-click="subCtrl2Click()">Sub2</button>
+
+            </div>
+        </div>
+    </div>
+<script src="pubsub/main/main.js"></script>
+    <script src="pubsub/constants/constants.js"></script>
+    <script src="pubsub/main/mainCtrl.js"></script>
+    <script src="pubsub/main/subCtrl.js"></script>
+    <script src="pubsub/main/subCtrl2.js"></script>
+    <script src="pubsub/directives/csComponent.js"></script>
+
+
+
+</body>
+</html>
