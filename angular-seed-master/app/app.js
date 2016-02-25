@@ -25,12 +25,12 @@ var configFn= function($stateProvider,$urlRouterProvider){
         url:"/home",
         templateUrl:"header/header.tpl.html"
     };
-    var cartPage = {
-        name:"cart",
-        url:"/cart",
-        templateUrl:"cart/cart.tpl.html"
+    var newcarState = {
+        name:'newcars',
+        templateUrl:"newcars/newcars.tpl.html"
     };
 
+    $stateProvider.state('newcars',newcarState);
     $stateProvider.state('home',homePage);
 };
 

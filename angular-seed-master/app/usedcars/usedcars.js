@@ -14,7 +14,8 @@ var configFn= function($stateProvider,$urlRouterProvider){
      $stateProvider.state('usedcars',usedCarsState);
 };
 
-app.config(['$stateProvider','$urlRouterProvider',configFn]);
+app.config(['$stateProvider','$urlRouterProvider',
+    configFn]);
 
 /**
  * Created by Administrator on 12/14/2015.

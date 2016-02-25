@@ -6,12 +6,12 @@ var app=angular.module('newcars',[]);
 
 var configFn= function($stateProvider,$urlRouterProvider){
     console.log("I am the new cars module");
-    var newcarState = {
+    /*var newcarState = {
         name:'newcars',
         templateUrl:"newcars/newcars.tpl.html"
     };
 
-    $stateProvider.state('newcars',newcarState);
+    $stateProvider.state('newcars',newcarState);*/
 };
 
 app.config(['$stateProvider','$urlRouterProvider',configFn]);
